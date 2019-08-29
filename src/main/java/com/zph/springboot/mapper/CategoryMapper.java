@@ -10,6 +10,5 @@ import com.zph.springboot.pojo.Category;
 @Mapper
 public interface CategoryMapper {
 	
-	@Select("select * from category_")
 	List<Category> findAll();
 }
