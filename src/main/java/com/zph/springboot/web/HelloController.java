@@ -13,11 +13,8 @@ import org.springframework.web.bind.annotation.RestController;
 public class HelloController {
 	
 	@RequestMapping("/hello")
-	public String hello(Model m) throws Exception{
-		m.addAttribute("now", DateFormat.getDateInstance().format(new Date()));
-		if(true) {
-			throw new Exception("some exception");
-		}
+	public String hello(Model m){
+		m.addAttribute("name", "thymeleaf");
 		return "hello";
 	}
 	
